@@ -4,14 +4,10 @@ import {
   Container,
   Typography,
   Box,
+  Paper,
   Button,
   Card,
   CardContent,
-  CardActions,
-  Grid,
-  IconButton,
-  Tooltip,
-  Paper,
 } from '@mui/material';
 import {
   School,
@@ -24,7 +20,12 @@ import {
   Code,
 } from '@mui/icons-material';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import Layout from './components/Layout';
+import ScrollAnimation from './components/ScrollAnimation';
+import AnimatedCard from './components/AnimatedCard';
+import AnimatedButton from './components/AnimatedButton';
+import { containerVariants } from './animations';
 
 const featureCards = [
   {
@@ -69,67 +70,95 @@ export default function Home() {
   return (
     <Layout>
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        {/* Hero Section */}
-        <Box sx={{ textAlign: 'center', mb: 8 }}>
-          <Typography
-            variant="h1"
-            sx={{
-              mb: 3,
-              background: 'linear-gradient(135deg, #0070f3 0%, #7c3aed 100%)',
-              backgroundClip: 'text',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              fontWeight: 800,
-            }}
-          >
-            La Mia Esperienza PCTO
-          </Typography>
-          <Typography
-            variant="h4"
-            color="text.secondary"
-            sx={{ mb: 2, fontWeight: 400 }}
-          >
-            Marco Simone
-          </Typography>
-          <Typography
-            variant="h5"
-            color="text.secondary"
-            sx={{ mb: 4, fontWeight: 300 }}
-          >
-            Un percorso di crescita professionale e personale
-          </Typography>
-          <Typography
-            variant="body1"
-            color="text.secondary"
-            sx={{ mb: 6, maxWidth: '600px', mx: 'auto', fontSize: '1.125rem' }}
-          >
-            Esplora il mio viaggio attraverso il PCTO, dalle competenze acquisite 
-            alle sfide superate, fino alle riflessioni finali su questo importante 
-            percorso formativo.
-          </Typography>
-          <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Button
-              variant="contained"
-              size="large"
-              component={Link}
-              href="/descrizione"
-              sx={{ px: 4, py: 1.5 }}
+        {/* Hero Section - Semplificato */}
+        <ScrollAnimation direction="up">
+          <Box sx={{ textAlign: 'center', mb: 8 }}>
+            <Typography
+              variant="h1"
+              sx={{
+                mb: 3,
+                background: 'linear-gradient(135deg, #0070f3 0%, #7c3aed 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                fontWeight: 800,
+              }}
             >
-              Inizia l\'esplorazione
-            </Button>
-            <Button
-              variant="outlined"
-              size="large"
-              component={Link}
-              href="/conclusione"
-              sx={{ px: 4, py: 1.5 }}
+              La Mia Esperienza PCTO
+            </Typography>
+            
+            <Typography
+              variant="h4"
+              color="text.secondary"
+              sx={{ mb: 2, fontWeight: 400 }}
             >
-              Vai alle conclusioni
-            </Button>
-          </Box>
-        </Box>
+              Marco Simone
+            </Typography>
+            
+            <Typography
+              variant="h5"
+              color="text.secondary"
+              sx={{ mb: 2, fontWeight: 300 }}
+            >
+              Un percorso di crescita professionale e personale
+            </Typography>
 
-        {/* Feature Cards */}
+            <Typography
+              variant="h6"
+              sx={{ 
+                mb: 4, 
+                fontWeight: 500,
+                color: 'primary.main',
+                background: 'linear-gradient(135deg, #0070f3 0%, #7c3aed 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              Elaborato per l'Esame di Stato 2025
+            </Typography>
+            
+            <Typography
+              variant="body1"
+              color="text.secondary"
+              sx={{ mb: 6, maxWidth: '600px', mx: 'auto', fontSize: '1.125rem' }}
+            >
+              Esplora il mio viaggio attraverso il PCTO, dalle competenze acquisite 
+              alle sfide superate, fino alle riflessioni finali su questo importante 
+              percorso formativo.
+            </Typography>
+            
+            <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Button
+                variant="contained"
+                size="large"
+                component={Link}
+                href="/descrizione"
+                sx={{
+                  px: 4,
+                  py: 1.5,
+                  background: 'linear-gradient(135deg, #0070f3 0%, #7c3aed 100%)',
+                  '&:hover': {
+                    background: 'linear-gradient(135deg, #0051cc 0%, #6d28d9 100%)',
+                  }
+                }}
+              >
+                Inizia l'esplorazione
+              </Button>
+              <Button
+                variant="outlined"
+                size="large"
+                component={Link}
+                href="/conclusione"
+                sx={{ px: 4, py: 1.5 }}
+              >
+                Vai alle conclusioni
+              </Button>
+            </Box>
+          </Box>
+        </ScrollAnimation>
+
+        {/* Feature Cards - Semplificato */}
         <Box
           sx={{
             display: 'grid',
@@ -139,135 +168,104 @@ export default function Home() {
               lg: 'repeat(3, 1fr)',
             },
             gap: 4,
+            mb: 8
           }}
         >
           {featureCards.map((card, index) => (
-            <Card
+            <ScrollAnimation 
               key={index}
-              sx={{
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                transition: 'transform 0.2s ease-in-out',
-                '&:hover': {
-                  transform: 'translateY(-4px)',
-                },
-              }}
+              direction={index % 2 === 0 ? 'left' : 'right'}
+              delay={index * 0.1}
             >
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    mb: 2,
-                    color: 'primary.main',
-                  }}
-                >
-                  {card.icon}
-                  <Typography variant="h6" sx={{ ml: 1, fontWeight: 600 }}>
-                    {card.title}
+              <Card
+                sx={{
+                  height: '100%',
+                  borderRadius: 3,
+                  transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: 4
+                  }
+                }}
+              >
+                <CardContent sx={{ p: 3 }}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      mb: 2,
+                      color: 'primary.main',
+                    }}
+                  >
+                    {card.icon}
+                    <Typography variant="h6" sx={{ ml: 1, fontWeight: 600 }}>
+                      {card.title}
+                    </Typography>
+                  </Box>
+                  <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                    {card.description}
                   </Typography>
-                </Box>
-                <Typography variant="body2" color="text.secondary">
-                  {card.description}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button
-                  size="small"
-                  component={Link}
-                  href={card.href}
-                  sx={{ ml: 1 }}
-                >
-                  Scopri di più →
-                </Button>
-              </CardActions>
-            </Card>
+                  <Button
+                    size="small"
+                    component={Link}
+                    href={card.href}
+                  >
+                    Scopri di più →
+                  </Button>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
           ))}
         </Box>
 
-        {/* Portfolio & Contatti Section */}
-        <Paper
-          elevation={0}
-          sx={{
-            mt: 12,
-            p: 6,
-            backgroundColor: 'grey.50',
-            borderRadius: '16px',
-            border: '1px solid',
-            borderColor: 'grey.200',
-            textAlign: 'center',
-          }}
-        >
-          <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3, color: 'primary.main' }}>
-            <Code sx={{ fontSize: 48 }} />
-          </Box>
-          <Typography variant="h4" sx={{ mb: 2, fontWeight: 600 }}>
-            Portfolio & Progetti
-          </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ mb: 4, maxWidth: '500px', mx: 'auto' }}>
-            Scopri i miei progetti e il mio percorso di sviluppo su GitHub. 
-            Ogni repository racconta una parte della mia evoluzione come developer.
-          </Typography>
-          
-          <Button
-            variant="contained"
-            size="large"
-            component="a"
-            href="https://github.com/Retr0dev-jpg"
-            target="_blank"
-            rel="noopener noreferrer"
-            startIcon={<GitHub />}
+        {/* CTA Section - Semplificato */}
+        <ScrollAnimation direction="up" delay={0.7}>
+          <Box
             sx={{
+              py: 8,
               px: 4,
-              py: 1.5,
-              background: 'linear-gradient(135deg, #24292e 0%, #1a1e23 100%)',
+              textAlign: 'center',
+              background: 'linear-gradient(135deg, #0070f3 0%, #7c3aed 100%)',
+              borderRadius: '16px',
               color: 'white',
-              '&:hover': {
-                background: 'linear-gradient(135deg, #1a1e23 0%, #0d1117 100%)',
-                transform: 'translateY(-2px)',
-                boxShadow: '0 8px 25px rgba(0, 0, 0, 0.3)',
-              },
             }}
           >
-            Visita il mio GitHub
-          </Button>
-          
-          <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-            @Retr0dev-jpg
-          </Typography>
-        </Paper>
-
-        {/* CTA Section */}
-        <Box
-          sx={{
-            mt: 8,
-            py: 8,
-            px: 4,
-            textAlign: 'center',
-            backgroundColor: 'grey.50',
-            borderRadius: '16px',
-            border: '1px solid',
-            borderColor: 'grey.200',
-          }}
-        >
-          <Typography variant="h3" sx={{ mb: 2, fontWeight: 600 }}>
-            Pronto per esplorare?
-          </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
-            Naviga attraverso le diverse sezioni per scoprire il percorso 
-            di crescita e apprendimento durante l\'esperienza PCTO.
-          </Typography>
-          <Button
-            variant="contained"
-            size="large"
-            component={Link}
-            href="/motivazione"
-            sx={{ px: 4, py: 1.5 }}
-          >
-            Scopri la motivazione
-          </Button>
-        </Box>
+            <Typography variant="h3" sx={{ mb: 2, fontWeight: 600 }}>
+              Pronto per esplorare?
+            </Typography>
+            <Typography variant="body1" sx={{ mb: 4, opacity: 0.9 }}>
+              Naviga attraverso le diverse sezioni per scoprire il percorso 
+              di crescita e apprendimento durante l'esperienza PCTO.
+            </Typography>
+            <Button
+              variant="outlined"
+              size="large"
+              component={Link}
+              href="/motivazione"
+              sx={{
+                backgroundColor: 'transparent',
+                color: 'white',
+                borderColor: 'white',
+                borderWidth: '2px',
+                px: 4,
+                py: 1.5,
+                fontWeight: 600,
+                textTransform: 'none',
+                borderRadius: 2,
+                '&:hover': {
+                  backgroundColor: 'white',
+                  color: '#0070f3',
+                  borderColor: 'white',
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)',
+                },
+                transition: 'all 0.3s ease',
+              }}
+            >
+              Scopri la motivazione
+            </Button>
+          </Box>
+        </ScrollAnimation>
       </Container>
     </Layout>
   );
