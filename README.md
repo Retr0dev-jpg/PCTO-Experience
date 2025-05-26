@@ -52,13 +52,8 @@ Il design si ispira ai siti moderni come Next.js, React.dev e Vercel, con:
 ## ✨ Caratteristiche
 
 - ✅ **Design Moderno** - Interfaccia ispirata a Next.js e Vercel
-- ✅ **Animazioni Fluide** - Sistema completo con Framer Motion
-- ✅ **Transizioni Pagina** - Effetto fade-to-white elegante
-- ✅ **Scroll Animations** - Elementi che appaiono durante lo scroll
-- ✅ **Progress Bar Animate** - Livelli di competenza animati
+- ✅ **Animazioni Fluide** - Transizioni pagina e scroll animations
 - ✅ **Responsive** - Ottimizzato per tutti i dispositivi
-- ✅ **Performance** - Server-side rendering con Next.js
-- ✅ **SEO Ottimizzato** - Meta tags e struttura semantica
 - ✅ **TypeScript** - Type safety completa
 - ✅ **Material UI** - Componenti professionali
 
@@ -79,13 +74,7 @@ Il design si ispira ai siti moderni come Next.js, React.dev e Vercel, con:
 - **Button Animations**: Hover states con colori brand-specific
 - **Progress Bars**: Riempimento graduale con contatori animati
 
-### **Componenti Animati**
-```typescript
-// Esempio di utilizzo
-<ScrollAnimation direction="left" delay={0.2}>
-  <Card>...</Card>
-</ScrollAnimation>
-```
+
 
 ## 📁 Struttura del Progetto
 
@@ -94,7 +83,8 @@ app/                          # App Router di Next.js
 ├── components/              # Componenti riutilizzabili
 │   ├── Layout.tsx          # Layout wrapper con animazioni
 │   ├── Navbar.tsx          # Barra di navigazione
-│   ├── Footer.tsx          # Footer con contatti social
+│   ├── Footer.tsx          # Footer con contatti social (responsive)
+│   ├── PageNavigation.tsx  # Navigazione responsive tra pagine
 │   ├── ScrollAnimation.tsx # Componente per animazioni scroll
 │   ├── AnimatedCard.tsx    # Card con hover effects
 │   └── AnimatedButton.tsx  # Button con micro-interactions
@@ -232,9 +222,10 @@ Riflessioni finali su:
 - **Footer**: Layout grid 3 colonne con contatti social
 
 ### **Responsive Breakpoints**
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px  
-- **Desktop**: > 1024px
+- **Mobile (xs)**: < 600px - Layout centrato, font ridotti, navigazione verticale
+- **Small (sm)**: 600px+ - Transizione verso layout desktop
+- **Medium (md)**: 900px+ - Layout desktop completo
+- **Large (lg)**: 1200px+ - Container max-width
 
 ### **Footer Contacts**
 Layout a piramide con:

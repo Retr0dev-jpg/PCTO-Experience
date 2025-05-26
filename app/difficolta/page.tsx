@@ -8,6 +8,7 @@ import {
 } from '@mui/material';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import PageNavigation from '../components/PageNavigation';
 
 export default function DifficoltaPage() {
   return (
@@ -47,24 +48,10 @@ export default function DifficoltaPage() {
         </Box>
 
         {/* Navigation */}
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 8 }}>
-          <Button
-            variant="outlined"
-            component={Link}
-            href="/competenze"
-            sx={{ px: 4, py: 1.5 }}
-          >
-            ← Competenze
-          </Button>
-          <Button
-            variant="contained"
-            component={Link}
-            href="/facilitatori"
-            sx={{ px: 4, py: 1.5 }}
-          >
-            Facilitatori →
-          </Button>
-        </Box>
+        <PageNavigation
+          previousPage={{ href: "/competenze", label: "← Competenze" }}
+          nextPage={{ href: "/facilitatori", label: "Facilitatori →" }}
+        />
       </Container>
     </Layout>
   );

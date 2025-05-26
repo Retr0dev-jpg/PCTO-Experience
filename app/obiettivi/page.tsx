@@ -20,6 +20,7 @@ import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 import Layout from '../components/Layout';
 import ScrollAnimation from '../components/ScrollAnimation';
+import PageNavigation from '../components/PageNavigation';
 
 const obiettivi = [
   {
@@ -249,24 +250,10 @@ export default function ObiettiviPage() {
 
         {/* Navigation */}
         <ScrollAnimation direction="up" delay={0.6}>
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 8 }}>
-            <Button
-              variant="outlined"
-              component={Link}
-              href="/descrizione"
-              sx={{ px: 4, py: 1.5 }}
-            >
-              ← Descrizione
-            </Button>
-            <Button
-              variant="contained"
-              component={Link}
-              href="/competenze"
-              sx={{ px: 4, py: 1.5 }}
-            >
-              Competenze Specifiche →
-            </Button>
-          </Box>
+          <PageNavigation
+            previousPage={{ href: "/descrizione", label: "← Descrizione" }}
+            nextPage={{ href: "/competenze", label: "Competenze Specifiche →" }}
+          />
         </ScrollAnimation>
       </Container>
     </Layout>

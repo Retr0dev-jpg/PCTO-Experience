@@ -8,6 +8,7 @@ import {
 } from '@mui/material';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import PageNavigation from '../components/PageNavigation';
 
 export default function FacilitatoriPage() {
   return (
@@ -47,24 +48,10 @@ export default function FacilitatoriPage() {
         </Box>
 
         {/* Navigation */}
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 8 }}>
-          <Button
-            variant="outlined"
-            component={Link}
-            href="/difficolta"
-            sx={{ px: 4, py: 1.5 }}
-          >
-            ← Difficoltà
-          </Button>
-          <Button
-            variant="contained"
-            component={Link}
-            href="/motivazione"
-            sx={{ px: 4, py: 1.5 }}
-          >
-            Motivazione →
-          </Button>
-        </Box>
+        <PageNavigation
+          previousPage={{ href: "/difficolta", label: "← Difficoltà" }}
+          nextPage={{ href: "/motivazione", label: "Motivazione →" }}
+        />
       </Container>
     </Layout>
   );

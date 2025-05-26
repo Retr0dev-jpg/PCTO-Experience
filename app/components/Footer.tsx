@@ -35,11 +35,19 @@ export default function Footer() {
           }}
         >
           {/* Sezione Principale */}
-          <Box>
+          <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
             <Typography variant="h6" sx={{ fontWeight: 700, mb: 1, color: 'primary.main' }}>
               PCTO Experience
             </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ mb: 2, maxWidth: '300px' }}>
+            <Typography 
+              variant="body2" 
+              color="text.secondary" 
+              sx={{ 
+                mb: 2, 
+                maxWidth: '300px',
+                mx: { xs: 'auto', md: 0 }
+              }}
+            >
               Documentazione del percorso di apprendimento e crescita professionale 
               di Marco Simone durante l'esperienza PCTO.
             </Typography>

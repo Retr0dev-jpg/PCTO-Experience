@@ -24,6 +24,7 @@ import {
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import ScrollAnimation from '../components/ScrollAnimation';
+import PageNavigation from '../components/PageNavigation';
 
 export default function DescrizionePage() {
   return (
@@ -101,10 +102,21 @@ export default function DescrizionePage() {
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '12px', px: 2 }}>
-                  <Typography variant="h6" component="span" sx={{ fontWeight: 600 }}>
+                  <Typography 
+                    variant="h6" 
+                    component="span" 
+                    sx={{ 
+                      fontWeight: 600,
+                      fontSize: { xs: '0.9rem', md: '1.25rem' }
+                    }}
+                  >
                     Fase Preparatoria
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography 
+                    variant="body2" 
+                    color="text.secondary"
+                    sx={{ fontSize: { xs: '0.75rem', md: '0.875rem' } }}
+                  >
                     Formazione iniziale e briefing sui compiti da svolgere
                   </Typography>
                 </TimelineContent>
@@ -118,10 +130,21 @@ export default function DescrizionePage() {
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '12px', px: 2 }}>
-                  <Typography variant="h6" component="span" sx={{ fontWeight: 600 }}>
+                  <Typography 
+                    variant="h6" 
+                    component="span" 
+                    sx={{ 
+                      fontWeight: 600,
+                      fontSize: { xs: '0.9rem', md: '1.25rem' }
+                    }}
+                  >
                     Attività Pratiche
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography 
+                    variant="body2" 
+                    color="text.secondary"
+                    sx={{ fontSize: { xs: '0.75rem', md: '0.875rem' } }}
+                  >
                     Svolgimento delle mansioni operative e progetti assegnati
                   </Typography>
                 </TimelineContent>
@@ -135,10 +158,21 @@ export default function DescrizionePage() {
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '12px', px: 2 }}>
-                  <Typography variant="h6" component="span" sx={{ fontWeight: 600 }}>
+                  <Typography 
+                    variant="h6" 
+                    component="span" 
+                    sx={{ 
+                      fontWeight: 600,
+                      fontSize: { xs: '0.9rem', md: '1.25rem' }
+                    }}
+                  >
                     Collaborazione
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography 
+                    variant="body2" 
+                    color="text.secondary"
+                    sx={{ fontSize: { xs: '0.75rem', md: '0.875rem' } }}
+                  >
                     Lavoro di squadra e interazione con colleghi e tutor
                   </Typography>
                 </TimelineContent>
@@ -151,10 +185,21 @@ export default function DescrizionePage() {
                   </TimelineDot>
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '12px', px: 2 }}>
-                  <Typography variant="h6" component="span" sx={{ fontWeight: 600 }}>
+                  <Typography 
+                    variant="h6" 
+                    component="span" 
+                    sx={{ 
+                      fontWeight: 600,
+                      fontSize: { xs: '0.9rem', md: '1.25rem' }
+                    }}
+                  >
                     Valutazione Finale
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography 
+                    variant="body2" 
+                    color="text.secondary"
+                    sx={{ fontSize: { xs: '0.75rem', md: '0.875rem' } }}
+                  >
                     Analisi dei risultati e riflessioni sull'esperienza
                   </Typography>
                 </TimelineContent>
@@ -165,24 +210,10 @@ export default function DescrizionePage() {
 
         {/* Navigation */}
         <ScrollAnimation direction="up" delay={0.4}>
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 8 }}>
-            <Button
-              variant="outlined"
-              component={Link}
-              href="/"
-              sx={{ px: 4, py: 1.5 }}
-            >
-              ← Torna alla Home
-            </Button>
-            <Button
-              variant="contained"
-              component={Link}
-              href="/obiettivi"
-              sx={{ px: 4, py: 1.5 }}
-            >
-              Obiettivi Formativi →
-            </Button>
-          </Box>
+          <PageNavigation
+            previousPage={{ href: "/", label: "← Torna alla Home" }}
+            nextPage={{ href: "/obiettivi", label: "Obiettivi Formativi →" }}
+          />
         </ScrollAnimation>
       </Container>
     </Layout>

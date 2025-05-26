@@ -15,6 +15,7 @@ import {
 } from '@mui/icons-material';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import PageNavigation from '../components/PageNavigation';
 
 export default function ConclusionePage() {
   return (
@@ -164,24 +165,10 @@ export default function ConclusionePage() {
         </Paper>
 
         {/* Navigation */}
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 8 }}>
-          <Button
-            variant="outlined"
-            component={Link}
-            href="/motivazione"
-            sx={{ px: 4, py: 1.5 }}
-          >
-            ← Motivazione
-          </Button>
-          <Button
-            variant="contained"
-            component={Link}
-            href="/"
-            sx={{ px: 4, py: 1.5 }}
-          >
-            Torna alla Home
-          </Button>
-        </Box>
+        <PageNavigation
+          previousPage={{ href: "/motivazione", label: "← Motivazione" }}
+          nextPage={{ href: "/", label: "Torna alla Home" }}
+        />
       </Container>
     </Layout>
   );

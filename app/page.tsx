@@ -88,37 +88,6 @@ export default function Home() {
             </Typography>
             
             <Typography
-              variant="h4"
-              color="text.secondary"
-              sx={{ mb: 2, fontWeight: 400 }}
-            >
-              Marco Simone
-            </Typography>
-            
-            <Typography
-              variant="h5"
-              color="text.secondary"
-              sx={{ mb: 2, fontWeight: 300 }}
-            >
-              Un percorso di crescita professionale e personale
-            </Typography>
-
-            <Typography
-              variant="h6"
-              sx={{ 
-                mb: 4, 
-                fontWeight: 500,
-                color: 'primary.main',
-                background: 'linear-gradient(135deg, #0070f3 0%, #7c3aed 100%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}
-            >
-              Elaborato per l'Esame di Stato 2025
-            </Typography>
-            
-            <Typography
               variant="body1"
               color="text.secondary"
               sx={{ mb: 6, maxWidth: '600px', mx: 'auto', fontSize: '1.125rem' }}
