@@ -92,9 +92,7 @@ export default function Home() {
               color="text.secondary"
               sx={{ mb: 6, maxWidth: '600px', mx: 'auto', fontSize: '1.125rem' }}
             >
-              Esplora il mio viaggio attraverso il PCTO, dalle competenze acquisite 
-              alle sfide superate, fino alle riflessioni finali su questo importante 
-              percorso formativo.
+              Scopri il mio percorso PCTO, dalle competenze acquisite alle sfide superate, fino alle riflessioni finali su questo importante percorso formativo.
             </Typography>
             
             <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>

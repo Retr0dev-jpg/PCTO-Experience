@@ -36,7 +36,7 @@ const obiettivi = [
     title: 'Imparare a confrontarsi con gli altri',
     description: 'Migliorare le competenze relazionali e di comunicazione, imparando a collaborare efficacemente in team e a gestire il confronto costruttivo.',
     skills: ['Comunicazione', 'Ascolto attivo', 'Empatia', 'Collaborazione'],
-    progress: 90,
+    progress: 65,
     color: 'secondary',
   },
   {
@@ -44,7 +44,7 @@ const obiettivi = [
     title: 'Comprendere le consegne',
     description: 'Sviluppare la capacità di analizzare e interpretare correttamente istruzioni e obiettivi, facendo domande appropriate quando necessario.',
     skills: ['Analisi', 'Comprensione', 'Attenzione ai dettagli', 'Chiarificazione'],
-    progress: 95,
+    progress: 100,
     color: 'success',
   },
   {
@@ -52,7 +52,7 @@ const obiettivi = [
     title: 'Rispettare le consegne',
     description: 'Imparare a gestire le scadenze e mantenere gli standard qualitativi richiesti, sviluppando affidabilità e precisione nel lavoro.',
     skills: ['Puntualità', 'Organizzazione', 'Qualità', 'Affidabilità'],
-    progress: 88,
+    progress: 100,
     color: 'warning',
   },
 ];

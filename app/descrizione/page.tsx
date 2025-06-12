@@ -70,19 +70,17 @@ export default function DescrizionePage() {
             }}
           >
             <Typography variant="h4" sx={{ mb: 3, fontWeight: 600 }}>
-              Panoramica Generale
+              Il Mio Percorso da MTech Solutions
             </Typography>
             <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              Il mio percorso di PCTO (Percorsi per le Competenze Trasversali e l'Orientamento) 
-              è stato un'esperienza fondamentale che mi ha permesso di entrare in contatto 
-              diretto con il mondo del lavoro, sviluppando competenze pratiche e trasversali 
-              essenziali per il mio futuro professionale.
+              Durante l'estate ho avuto l'opportunità straordinaria di lavorare presso MTech Solutions, 
+              un negozio di informatica specializzato in riparazioni di dispositivi elettronici, installazioni 
+              e configurazione di server per privati e aziende.
             </Typography>
             <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-              Durante questo periodo ho avuto l'opportunità di applicare le conoscenze 
-              teoriche acquisite a scuola in un contesto lavorativo reale, confrontandomi 
-              con sfide concrete e sviluppando una maggiore consapevolezza delle mie 
-              capacità e dei miei interessi professionali.
+              Durante questa esperienza mi sono occupato della riparazione di dispositivi elettronici quali 
+              computer, telefoni e componenti elettronici, oltre all'installazione e configurazione di 
+              applicazioni per la gestione aziendale presso le aziende.
             </Typography>
           </Paper>
         </ScrollAnimation>
@@ -110,14 +108,14 @@ export default function DescrizionePage() {
                       fontSize: { xs: '0.9rem', md: '1.25rem' }
                     }}
                   >
-                    Fase Preparatoria
+                    Prima Settimana - L'Inserimento
                   </Typography>
                   <Typography 
                     variant="body2" 
                     color="text.secondary"
                     sx={{ fontSize: { xs: '0.75rem', md: '0.875rem' } }}
                   >
-                    Formazione iniziale e briefing sui compiti da svolgere
+                    Orientamento, sicurezza e osservazione delle attività
                   </Typography>
                 </TimelineContent>
               </TimelineItem>
@@ -138,14 +136,14 @@ export default function DescrizionePage() {
                       fontSize: { xs: '0.9rem', md: '1.25rem' }
                     }}
                   >
-                    Attività Pratiche
+                    Settimane 2-4 - Apprendimento Pratico
                   </Typography>
                   <Typography 
                     variant="body2" 
                     color="text.secondary"
                     sx={{ fontSize: { xs: '0.75rem', md: '0.875rem' } }}
                   >
-                    Svolgimento delle mansioni operative e progetti assegnati
+                    Prime riparazioni guidate e installazioni software
                   </Typography>
                 </TimelineContent>
               </TimelineItem>
@@ -166,14 +164,14 @@ export default function DescrizionePage() {
                       fontSize: { xs: '0.9rem', md: '1.25rem' }
                     }}
                   >
-                    Collaborazione
+                    Settimane 5-6 - Maggiore Autonomia
                   </Typography>
                   <Typography 
                     variant="body2" 
                     color="text.secondary"
                     sx={{ fontSize: { xs: '0.75rem', md: '0.875rem' } }}
                   >
-                    Lavoro di squadra e interazione con colleghi e tutor
+                    Gestione indipendente di alcuni clienti e progetti
                   </Typography>
                 </TimelineContent>
               </TimelineItem>
@@ -193,14 +191,14 @@ export default function DescrizionePage() {
                       fontSize: { xs: '0.9rem', md: '1.25rem' }
                     }}
                   >
-                    Valutazione Finale
+                    Conclusione - Valutazione
                   </Typography>
                   <Typography 
                     variant="body2" 
                     color="text.secondary"
                     sx={{ fontSize: { xs: '0.75rem', md: '0.875rem' } }}
                   >
-                    Analisi dei risultati e riflessioni sull'esperienza
+                    Feedback finale e riflessioni sull'esperienza
                   </Typography>
                 </TimelineContent>
               </TimelineItem>
