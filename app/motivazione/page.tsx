@@ -29,13 +29,7 @@ export default function MotivazionePage() {
           >
             Motivazione
           </Typography>
-          <Typography
-            variant="h5"
-            color="text.secondary"
-            sx={{ mb: 4, fontWeight: 400 }}
-          >
-            Le ragioni che mi hanno spinto a intraprendere questo percorso
-          </Typography>
+
         </Box>
 
         {/* Motivazione Content */}
@@ -50,58 +44,14 @@ export default function MotivazionePage() {
               borderColor: 'grey.200',
             }}
           >
-            <Typography variant="h4" sx={{ mb: 4, fontWeight: 600 }}>
-              Perché Ho Scelto Questo Percorso
+            <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
+              Ho affrontato questo percorso con una grande motivazione perché sin da piccolo ho sempre avuto una grande passione per i dispositivi elettronici e per i programmi software e hardware. Questa curiosità innata mi ha sempre spinto a smontare e rimontare oggetti per capire come funzionassero.
             </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              Sinceramente, all'inizio non ero entusiasta dell'idea del PCTO. Come molti miei compagni, 
-              lo vedevo come una cosa da fare per forza, un obbligo scolastico che avrebbe solo sottratto 
-              tempo alle vacanze estive. Ma mio padre, che lavora in un ufficio e usa il computer tutto il giorno, 
-              mi ha sempre detto: "Se impari a riparare i computer, avrai sempre lavoro".
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              La verità è che mi sono sempre piaciuti i computer. Da piccolo smontavo tutto quello che trovavo 
-              in casa (con grande disappunto di mia madre), e al liceo ero sempre quello che i compagni chiamavano 
-              quando il loro PC faceva le bizze. Però una cosa è aiutare un amico con Windows che si è bloccato, 
-              un'altra è farlo diventare un lavoro vero.
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              Quando ho visto l'annuncio di MTech Solutions che cercava uno stagista, ho pensato: "Perché no?". 
-              Era l'occasione perfetta per capire se quella passione per la tecnologia poteva diventare qualcosa di più. 
-              E poi, essere pagato per imparare non era male come idea!
+            <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
+              Aver avuto la possibilità di trasformare questa passione in un'esperienza lavorativa concreta è stato per me motivo di grande entusiasmo. Sapevo che avrei finalmente potuto mettere in pratica quello che avevo sempre studiato e sperimentato come hobby, apprendendo al contempo le dinamiche professionali del settore tecnologico.
             </Typography>
           </Box>
 
-          <Box
-            sx={{
-              p: 6,
-              backgroundColor: 'primary.50',
-              borderRadius: '16px',
-              border: '1px solid',
-              borderColor: 'primary.100',
-            }}
-          >
-            <Typography variant="h4" sx={{ mb: 4, fontWeight: 600, color: 'primary.main' }}>
-              Le Mie Aspirazioni
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              Quel che mi ha colpito di più è stata la varietà del lavoro. Pensavo che riparare computer fosse sempre 
-              la stessa routine, invece ogni giorno portava sfide diverse: dal laptop di uno studente pieno di virus, 
-              alla rete aziendale che non funzionava, fino al server di un ristorante che aveva problemi proprio 
-              nel weekend più affollato dell'anno.
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              Ho capito che questo mondo mi piace perché combina la parte tecnica (che mi ha sempre affascinato) 
-              con il rapporto umano. Ogni cliente ha una storia, un problema urgente da risolvere, e tu sei lì 
-              per aiutarlo. È gratificante vedere il sollievo sul volto di una persona quando gli risolvi 
-              un problema che la stava mandando in panico.
-            </Typography>
-            <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-              Ora so che voglio continuare in questo settore. Non so ancora se punto all'università di informatica 
-              o preferisco specializzarmi subito, ma una cosa è certa: questa esperienza mi ha fatto capire 
-              che la tecnologia è il mio futuro.
-            </Typography>
-          </Box>
         </Box>
 
         {/* Navigation */}

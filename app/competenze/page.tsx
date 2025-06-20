@@ -54,9 +54,7 @@ export default function CompetenzePage() {
             <Typography variant="h4" sx={{ mb: 4, fontWeight: 600 }}>
               Competenze Tecniche Acquisite
             </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              In questo mese e mezzo da MTech Solutions ho migliorato le mie competenze molto di più di quanto immaginassi. All'inizio il mio compito era della gestione software. Poi, passo dopo passo, ho iniziato anche con dell'hardware, fino a creare e configurare PC completi.
-            </Typography>
+
             
             <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 4, mb: 4 }}>
               <Box>
@@ -96,9 +94,7 @@ export default function CompetenzePage() {
               </Box>
             </Box>
             
-            <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-              La cosa che mi ha colpito di più è quanto sia importante la metodologia. Non si tratta solo di sapere come fare le cose, ma di saperle fare bene, velocemente.
-            </Typography>
+
           </Box>
 
           {/* Competenze di Rete */}
@@ -115,10 +111,7 @@ export default function CompetenzePage() {
             <Typography variant="h4" sx={{ mb: 4, fontWeight: 600, color: 'primary.main' }}>
               Networking e Installazioni
             </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              Una delle parti più interessanti è stata imparare a gestire le reti. Ad esempio uno di questi giorni siamo andati presso un cliente che doveva
-              installare le nuove stampanti e metterle in rete. Questo mi ha permesso di imparare a gestire le reti in modo più approfondito, e di poter
-            </Typography>
+
             
             <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 4, mb: 4 }}>
               <Box>
@@ -158,40 +151,10 @@ export default function CompetenzePage() {
               </Box>
             </Box>
             
-            <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-              Durante la mia permanenza all'interno di MTech Solutions, ho avuto l'opportunità di portare dell'innovazione, implementando un sistema di 
-              automazione delle installazioni durante il le installazioni dei programmi base dei pc appena formattati. Questa procedura è stata molto
-              apprezzata dal titolare, in quanto consentirà di automatizzare i processi.
-            </Typography>
+
           </Box>
 
-          {/* Competenze Relazionali */}
-          <Box
-            sx={{
-              p: 6,
-              backgroundColor: 'success.50',
-              borderRadius: '16px',
-              border: '1px solid',
-              borderColor: 'success.100',
-            }}
-          >
-            <Typography variant="h4" sx={{ mb: 4, fontWeight: 600, color: 'success.main' }}>
-              Gestione Clienti e Comunicazione
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              Sicuramente la competenza più importante che ho potuto sperimentare e quindi affinare è stata quella di essere in grado di comunicare con
-              i clienti.
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              All'inizio ero timido e lasciavo parlare sempre il titolare, ma poi ho capito che era fondamentale saper spiegare i problemi in modo semplice
-              e rassicure le persone. ho imparato anche a fare domande precise per capire di cosa aveva bisogno il cliente, a dare tempi realistici per le
-              riparazioni e sopratutto a non promettere miracoli
-            </Typography>
-            <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-              Ho capito che questa competenza è molto importante, perchè va ben oltre la tecnologia, riguarda il saper relazionarso ccon le persone,
-              cosa che serve ricuramente in qualsiasi lavoro.
-            </Typography>
-          </Box>
+
         </Box>
 
         {/* Navigation */}

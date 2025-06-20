@@ -31,7 +31,7 @@ const featureCards = [
   {
     icon: <Assignment />,
     title: 'Descrizione',
-    description: 'Panoramica completa delle esperienze vissute da Marco Simone durante il PCTO',
+    description: 'Panoramica completa delle esperienze vissute durante il PCTO',
     href: '/descrizione',
   },
   {
@@ -61,7 +61,7 @@ const featureCards = [
   {
     icon: <School />,
     title: 'Conclusioni',
-    description: 'Riflessioni finali su competenze trasversali e soft skills apprese',
+    description: 'Riflessioni finali sulle competenze trasversali e soft skills apprese',
     href: '/conclusione',
   },
 ];

@@ -73,9 +73,7 @@ export default function DescrizionePage() {
               Il Mio Percorso da MTech Solutions
             </Typography>
             <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              Durante l'estate ho avuto l'opportunità straordinaria di lavorare presso MTech Solutions, 
-              un negozio di informatica specializzato in riparazioni di dispositivi elettronici, installazioni 
-              e configurazione di server per privati e aziende.
+              Durante l'estate ho svolto il PCTO presso MTech Solutions, un negozio di informatica specializzato in riparazioni di dispositivi elettronici, installazioni e configurazione di server per privati e aziende.
             </Typography>
             <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
               Durante questa esperienza mi sono occupato della riparazione di dispositivi elettronici quali 

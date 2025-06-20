@@ -25,16 +25,16 @@ import PageNavigation from '../components/PageNavigation';
 const obiettivi = [
   {
     icon: <SelfImprovement />,
-    title: 'Imparare a lavorare in autonomia',
-    description: 'Sviluppare la capacità di gestire compiti e responsabilità in modo indipendente, prendendo iniziative e risolvendo problemi senza supervisione costante.',
+    title: 'Lavorare in autonomia',
+    description: 'Ho acquisito la capacità di gestire i compiti che mi venivano assegnati in modo indipendente.',
     skills: ['Problem solving', 'Iniziativa personale', 'Gestione del tempo', 'Responsabilità'],
     progress: 85,
     color: 'primary',
   },
   {
     icon: <Groups />,
-    title: 'Imparare a confrontarsi con gli altri',
-    description: 'Migliorare le competenze relazionali e di comunicazione, imparando a collaborare efficacemente in team e a gestire il confronto costruttivo.',
+    title: 'Confrontarsi con gli altri',
+    description: 'Durante l\'esperienza ho imparato a collaborare positivamente con il titolare, ascoltando con attenzione i suoi consigli e proponendo il mio parere in maniera costruttiva.',
     skills: ['Comunicazione', 'Ascolto attivo', 'Empatia', 'Collaborazione'],
     progress: 65,
     color: 'secondary',
@@ -42,7 +42,7 @@ const obiettivi = [
   {
     icon: <Assignment />,
     title: 'Comprendere le consegne',
-    description: 'Sviluppare la capacità di analizzare e interpretare correttamente istruzioni e obiettivi, facendo domande appropriate quando necessario.',
+    description: 'Ho sviluppato la capacità di analizzare e interpretare correttamente istruzioni e obiettivi, ponendo domande appropriate quando necessario.',
     skills: ['Analisi', 'Comprensione', 'Attenzione ai dettagli', 'Chiarificazione'],
     progress: 100,
     color: 'success',
@@ -50,7 +50,7 @@ const obiettivi = [
   {
     icon: <CheckCircle />,
     title: 'Rispettare le consegne',
-    description: 'Imparare a gestire le scadenze e mantenere gli standard qualitativi richiesti, sviluppando affidabilità e precisione nel lavoro.',
+    description: 'Ho imparato a gestire le scadenze sviluppando affidabilità e precisione nel lavoro.',
     skills: ['Puntualità', 'Organizzazione', 'Qualità', 'Affidabilità'],
     progress: 100,
     color: 'warning',
@@ -175,43 +175,51 @@ export default function ObiettiviPage() {
                   },
                 }}
               >
-                <CardContent sx={{ flexGrow: 1, p: 4 }}>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      mb: 3,
-                      color: `${obiettivo.color}.main`,
-                    }}
-                  >
-                    {obiettivo.icon}
-                    <Typography variant="h5" sx={{ ml: 1, fontWeight: 600 }}>
-                      {obiettivo.title}
+                <CardContent sx={{ 
+                  flexGrow: 1, 
+                  p: 4,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between'
+                }}>
+                  <Box>
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        mb: 3,
+                        color: `${obiettivo.color}.main`,
+                      }}
+                    >
+                      {obiettivo.icon}
+                      <Typography variant="h5" sx={{ ml: 1, fontWeight: 600 }}>
+                        {obiettivo.title}
+                      </Typography>
+                    </Box>
+                    
+                    <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.6 }}>
+                      {obiettivo.description}
                     </Typography>
-                  </Box>
-                  
-                  <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.6 }}>
-                    {obiettivo.description}
-                  </Typography>
 
-                  <Box sx={{ mb: 3 }}>
-                    <Typography variant="subtitle2" sx={{ mb: 2, fontWeight: 600 }}>
-                      Competenze sviluppate:
-                    </Typography>
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                      {obiettivo.skills.map((skill, skillIndex) => (
-                        <Chip
-                          key={skillIndex}
-                          label={skill}
-                          size="small"
-                          color={obiettivo.color as any}
-                          variant="outlined"
-                        />
-                      ))}
+                    <Box sx={{ mb: 3 }}>
+                      <Typography variant="subtitle2" sx={{ mb: 2, fontWeight: 600 }}>
+                        Competenze sviluppate:
+                      </Typography>
+                      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                        {obiettivo.skills.map((skill, skillIndex) => (
+                          <Chip
+                            key={skillIndex}
+                            label={skill}
+                            size="small"
+                            color={obiettivo.color as any}
+                            variant="outlined"
+                          />
+                        ))}
+                      </Box>
                     </Box>
                   </Box>
 
-                  <Box>
+                  <Box sx={{ mt: 'auto' }}>
                     <AnimatedProgressBar value={obiettivo.progress} color={obiettivo.color} delay={index} />
                   </Box>
                 </CardContent>
@@ -220,33 +228,7 @@ export default function ObiettiviPage() {
           ))}
         </Box>
 
-        {/* Summary */}
-        <ScrollAnimation direction="up" delay={0.5}>
-          <Box
-            sx={{
-              p: 6,
-              backgroundColor: 'grey.50',
-              borderRadius: '16px',
-              border: '1px solid',
-              borderColor: 'grey.200',
-              textAlign: 'center',
-              mb: 8,
-            }}
-          >
-            <Typography variant="h4" sx={{ mb: 3, fontWeight: 600 }}>
-              Risultati Raggiunti
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              Attraverso il percorso PCTO ho raggiunto tutti gli obiettivi formativi prefissati,
-              sviluppando competenze trasversali fondamentali che mi accompagneranno nel mio
-              futuro professionale e personale.
-            </Typography>
-            <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-              Ogni obiettivo è stato un tassello importante nella mia crescita, contribuendo
-              a formare una base solida per affrontare le sfide del mondo del lavoro.
-            </Typography>
-          </Box>
-        </ScrollAnimation>
+
 
         {/* Navigation */}
         <ScrollAnimation direction="up" delay={0.6}>

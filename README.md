@@ -11,11 +11,11 @@
 
 Un sito web moderno e interattivo per documentare l'esperienza PCTO (Percorsi per le Competenze Trasversali e l'Orientamento), realizzato con Next.js, Material UI e Framer Motion.
 
-![Next.js](https://img.shields.io/badge/Next.js-15.1.8-black?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)
-![Material-UI](https://img.shields.io/badge/Material--UI-7.1.0-007FFF?style=for-the-badge&logo=mui)
+![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19.1.0-blue?style=for-the-badge&logo=react)
+![Material-UI](https://img.shields.io/badge/Material--UI-7.1.1-007FFF?style=for-the-badge&logo=mui)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
-![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12.12.2-pink?style=for-the-badge&logo=framer)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12.17.0-pink?style=for-the-badge&logo=framer)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=for-the-badge)
 
 ## 📋 Indice
@@ -109,17 +109,17 @@ README.md                   # Documentazione
 ## 🛠 Tecnologie Utilizzate
 
 ### **Frontend Framework**
-- **[Next.js 15.1.8](https://nextjs.org/)** - Framework React con App Router
-- **[React 19](https://react.dev/)** - Libreria UI component-based
+- **[Next.js 15.3.3](https://nextjs.org/)** - Framework React con App Router
+- **[React 19.1.0](https://react.dev/)** - Libreria UI component-based
 - **[TypeScript 5](https://www.typescriptlang.org/)** - Type safety e migliore DX
 
 ### **Animazioni & Interactions**
-- **[Framer Motion 12.12.2](https://www.framer.com/motion/)** - Libreria animazioni React
+- **[Framer Motion 12.17.0](https://www.framer.com/motion/)** - Libreria animazioni React
 - **CSS Transitions** - Transizioni native per performance
 - **Intersection Observer** - Trigger animations on scroll
 
 ### **UI/UX Libraries**
-- **[Material UI 7.1.0](https://mui.com/)** - Component library professionale
+- **[Material UI 7.1.1](https://mui.com/)** - Component library professionale
 - **[Material Icons](https://mui.com/material-ui/material-icons/)** - Set di icone coerente
 - **[Emotion](https://emotion.sh/)** - CSS-in-JS per styling dinamico
 
